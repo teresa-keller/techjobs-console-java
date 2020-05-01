@@ -113,6 +113,26 @@ public class TechJobs {
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 //for of loop, for index loop, getKey(), getValue()
 //hashmap of allJobs key = choice, value = specific job info
-        System.out.println("printJobs is not implemented yet");
+//
+        //            for (int i = 0; i < someJobs.size(); i++) {
+        //            }
+        someJobs.addAll(someJobs);
+
+        for (HashMap <String, String> job : someJobs) {
+
+           for (String index : job.keySet()) {
+               System.out.println(index + ": " + job.get(index));
+               if(index.equals("core competency")) {
+                   System.out.println('\n');
+               }
+           }
+
+
+        }
+//        System.out.println(someJobs);
+
+
+
+//        System.out.println("printJobs is not implemented yet");
     }
 }
