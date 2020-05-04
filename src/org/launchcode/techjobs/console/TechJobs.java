@@ -111,14 +111,17 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+        if (!someJobs.contains(in)) {
+            System.out.println("Search term not found.");
+        }
 
         for (HashMap <String, String> job : someJobs) {
 
-           for (String i : job.keySet()) {
+            for (String i : job.keySet()) {
                System.out.println(i + ": " + job.get(i));
 
                if (i.equals("core competency")) {
-                   System.out.println('\n');
+                   System.out.println('\n' + "*****" + '\n');
                }
            }
         }
