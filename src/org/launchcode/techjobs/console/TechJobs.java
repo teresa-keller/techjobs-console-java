@@ -123,5 +123,5 @@ public class TechJobs {
         if (someJobs.isEmpty()) {
             System.out.println("Search term not found.");
         }
-        }
     }
+}
