@@ -91,14 +91,12 @@ public class JobData {
 
     public static ArrayList<HashMap<String, String>> findByValue(String searchTerm) {
 
+        loadData();
 
         ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
-//        ArrayList<HashMap<String, String>> jobsListings = new ArrayList<>();
+
         allJobs = findAll();
 
-//
-
-//        System.out.println(jobsListings);
         for (HashMap<String, String> job : allJobs) {
 
             for (String listing : job.values()) {
@@ -114,6 +112,7 @@ public class JobData {
         }
         return jobs;
     }
+
     private static void loadData() {
 
         // Only load data once
